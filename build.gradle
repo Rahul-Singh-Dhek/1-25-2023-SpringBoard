@@ -1,0 +1,29 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '19'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+
+	implementation 'org.apache.servicemix.document:org.apache.servicemix.document:1.6.1'
+	implementation 'name.remal.gradle-plugins.lombok:lombok:2.0.1'
+	implementation 'io.micronaut.data:micronaut-data-tck:3.2.2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.data:spring-data-mongodb-parent:4.0.0'
+	testImplementation 'org.springframework.data:spring-data-mongodb-parent:4.0.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
